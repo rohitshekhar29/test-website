@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Intersection Observer for fade-in animations
+    // Enhanced Intersection Observer for fade-in animations with stagger
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -159,16 +159,25 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
     // Observe all sections for fade-in effect
-    document.querySelectorAll('.section').forEach(section => {
+    document.querySelectorAll('.section, .product-section, .faster-resolution-section, .use-cases-section, .team-section, .cta-section').forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(section);
+    });
+
+    // Enhanced hover effects for cards
+    const cards = document.querySelectorAll('.logo-card, .showcase-tab, .comparison-half');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
     });
 
     // Team Section Scroll Animations
