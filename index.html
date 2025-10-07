@@ -76,11 +76,11 @@
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="https://vimeo.com/1120140954" target="_blank" class="btn-secondary btn-lg">
+                    <a href="#demo" class="btn-secondary btn-lg">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="5 3 19 12 5 21 5 3"/>
                         </svg>
-                        <span>Watch 90s Demo</span>
+                        <span>Watch Product Demo</span>
                     </a>
                 </div>
 
@@ -311,34 +311,48 @@
     <!-- Demo Video Section -->
     <section id="demo" class="demo-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">See It In Action</span>
-                <h2>Watch Chiron Identify Root Causes in Real-Time</h2>
-                <p>See how Chiron automatically correlates alerts across your entire stack</p>
+            <div class="demo-intro">
+                <span class="demo-badge">Product Demo</span>
+                <h2 class="demo-title">See Chiron in Action</h2>
+                <p class="demo-description">Watch how Chiron instantly identifies root causes when SLAs breach—no manual correlation needed.</p>
             </div>
 
-            <div class="video-container">
-                <video controls poster="images/chiron-hero-screenshot-transparent.png" class="demo-video">
-                    <source src="images/Video-Demo-2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="video-wrapper">
+                <div class="video-player">
+                    <video controls autoplay muted loop poster="images/chiron-hero-screenshot-transparent.png" class="demo-video">
+                        <source src="images/Video-Demo-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay">
+                        <svg class="play-icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="40" fill="rgba(28, 115, 244, 0.9)"/>
+                            <polygon points="32,25 32,55 55,40" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
 
-            <div class="demo-highlights">
-                <div class="highlight-card">
-                    <div class="highlight-icon">🎯</div>
-                    <h4>Instant Correlation</h4>
-                    <p>Watch how Chiron connects alerts across multiple services automatically</p>
+            <div class="demo-features">
+                <div class="demo-feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-info">
+                        <h4>Real-Time Alert Correlation</h4>
+                        <p>See alerts cascade across services automatically</p>
+                    </div>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">📊</div>
-                    <h4>Visual Dependency Map</h4>
-                    <p>See the full dependency chain from symptom to root cause</p>
+                <div class="demo-feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-info">
+                        <h4>Visual Dependency Mapping</h4>
+                        <p>Full visibility from symptom to root cause</p>
+                    </div>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">⚡</div>
-                    <h4>Real-Time Updates</h4>
-                    <p>Experience live monitoring as issues are detected and resolved</p>
+                <div class="demo-feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-info">
+                        <h4>Instant Root Cause Identification</h4>
+                        <p>Know exactly what broke and why—in seconds</p>
+                    </div>
                 </div>
             </div>
         </div>
