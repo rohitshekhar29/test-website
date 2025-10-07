@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Chiron - Real-Time SLA Monitoring & Observability</title>
+    <meta name="description" content="Chiron delivers SLA lapse alerts with identified bottlenecks in real time. Stream all telemetry into causal state models for instant root cause analysis.">
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/webclip.png">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo">
+                    <img src="images/chiron-logo-transparent-small_1chiron-logo-transparent-small.png" alt="Chiron Logo">
+                    <div class="nav-logo-text">CHIRON</div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#product" class="nav-link">Product</a></li>
+                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="#about-us" class="nav-link">About Us</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html" class="btn btn-primary">Try Now</a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        
+        <div class="hero-content-wrapper">
+            <div class="container-wide">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Know What Breaks Your SLA<br>
+                        <span class="highlight-text">In Realtime</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        The world's first observability-first stream engine. Do deep, layered pattern matching across metrics, logs, and traces without store-and-query or time-window limits. SLA alerts surface instantly, with root-cause correlation built in.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <span>Request demo</span>
+                        </a>
+                        <a href="https://vimeo.com/1120140954" target="_blank" class="btn btn-secondary btn-large">
+                            <span>See how the future works - 1:16 min</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <video 
+                    class="hero-architecture-image"
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    poster="images/Hero.png"
+                >
+                    <source src="images/HeroVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Trusted By Section -->
+            <div class="hero-trusted">
+                <p class="trusted-text">Our early beta adopters across enterprise verticals</p>
+                <div class="companies-logos">
+                    <div class="company-item">
+                        <span class="company-icon">🧬</span>
+                        <span class="company-text">MedTech Genome</span>
+                    </div>
+                    <div class="company-item">
+                        <span class="company-icon">🔒</span>
+                        <span class="company-text">Security Unicorn</span>
+                    </div>
+                    <div class="company-item">
+                        <span class="company-icon">📈</span>
+                        <span class="company-text">Post IPO Data Infra</span>
+                    </div>
+                    <div class="company-item">
+                        <span class="company-icon">🌐</span>
+                        <span class="company-text">Global Fortune 100 streaming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Section -->
+    <section id="product" class="product-section">
+        <!-- Section Header -->
+        <div class="product-header">
+            <div class="product-badge">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-text">Stream-First Architecture</span>
+        </div>
+            <h2 class="product-title">The Evolution of Observability</h2>
+            <p class="product-subtitle">Netflix and Cribl proved streaming can slash observability costs by 90%. Chiron takes it further delivering real-time MTTR reduction by tracing SLA lapses directly to bottlenecks, instantly.</p>
+            </div>
+
+        <div class="container">
+            <!-- Product Showcase -->
+            <div class="product-showcase">
+                <div class="showcase-tabs">
+                    <button class="showcase-tab active" data-showcase="streaming">
+                        <div class="tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="tab-text">Streaming Architecture</span>
+                    </button>
+                    <button class="showcase-tab" data-showcase="alerts">
+                        <div class="tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+                        <span class="tab-text">Cascaded Alerts</span>
+                    </button>
+                    <button class="showcase-tab" data-showcase="ai">
+                        <div class="tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                </div>
+                        <span class="tab-text">AI Integration</span>
+                    </button>
+                    <button class="showcase-tab" data-showcase="integration">
+                        <div class="tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+            </div>
+                        <span class="tab-text">Easy Integration</span>
+                    </button>
+        </div>
+
+                <div class="showcase-content">
+                    <!-- Streaming Architecture -->
+                    <div class="showcase-panel active" id="streaming">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">STREAMING OBSERVABILITY</div>
+                                <h3>Beyond Cost Savings</h3>
+                                <p class="panel-description">Most streaming approaches stop at cost savings by bypassing heavy storage and queries. Chiron goes further everaging in-flight correlation, stateful context propagation, and cross-layer dependency modeling to cut MTTR in real time.</p>
+                                
+                                <div class="feature-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">⚡</div>
+                                        <div class="highlight-text">
+                                            <strong>In-Flight Correlation</strong>
+                                            <span>Correlate signals without storage overhead</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">🔄</div>
+                                        <div class="highlight-text">
+                                            <strong>Stateful Context</strong>
+                                            <span>Maintain dependency relationships in real-time</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">📊</div>
+                                        <div class="highlight-text">
+                                            <strong>Cross-Layer Modeling</strong>
+                                            <span>Map business SLAs to technical dependencies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <img src="images/CHIRON_ARCH.png" alt="Streaming observability architecture" class="visual-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Cascaded Alerts -->
+                    <div class="showcase-panel" id="alerts">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">ALERTS WITH CAUSAL CHAIN</div>
+                                <h3>Cascaded Alerts</h3>
+                                <p class="panel-description">What usually takes hours of log-sifting and cross-team debugging is done instantly. Chiron links signals across database, network, and application layers into a single SLA-level alert.</p>
+                            </div>
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <img src="images/chiron-hero-screenshot-transparent.png" alt="Chiron cascaded alerts architecture" class="visual-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    <!-- AI Integration -->
+                    <div class="showcase-panel" id="ai">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">AI READY</div>
+                                <h3>Transparent AI</h3>
+                                <p class="panel-description">Use AI to generate flows—routine to complex—like developers do, not theater. Chiron compiles those flows into auditable operators and runs them on-box at runtime.</p>
+                                
+                                <div class="ai-features">
+                                    <div class="ai-feature">
+                                        <div class="ai-icon">🔒</div>
+                                        <div class="ai-text">
+                                            <strong>Data Privacy</strong>
+                                            <span>Customer data never leaves your stack</span>
+                            </div>
+                        </div>
+                                    <div class="ai-feature">
+                                        <div class="ai-icon">⚡</div>
+                                        <div class="ai-text">
+                                            <strong>Zero Latency</strong>
+                                            <span>No external round-trips or token dependencies</span>
+                    </div>
+                            </div>
+                                    <div class="ai-feature">
+                                        <div class="ai-icon">🔍</div>
+                                        <div class="ai-text">
+                                            <strong>Auditable</strong>
+                                            <span>Transparent, deterministic execution</span>
+                        </div>
+                    </div>
+                            </div>
+                            </div>
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <div class="ai-terminal">
+                                        <div class="terminal-header">
+                                            <div class="terminal-controls">
+                                                <div class="control-dot red"></div>
+                                                <div class="control-dot yellow"></div>
+                                                <div class="control-dot green"></div>
+                                            </div>
+                                            <div class="terminal-title">AI Integration Workflow</div>
+                                        </div>
+                                        <div class="terminal-content">
+                                            <div class="terminal-line">
+                                                <span class="line-number">1</span>
+                                                <span class="terminal-text">Can you go through the code for Rheos fetch alerts API and create cascaded performance monitor for it. Rheos is deployed in staging name space so take advantage of platform monitor</span>
+                                            </div>
+                                            <div class="terminal-line">
+                                                <span class="line-number">2</span>
+                                                <span class="terminal-text success">✓ Analyzing Rheos fetch alerts API code patterns...</span>
+                                            </div>
+                                            <div class="terminal-line">
+                                                <span class="line-number">3</span>
+                                                <span class="terminal-text success">✓ Creating cascaded performance monitor for Rheos fetch alerts API</span>
+                                            </div>
+                                            <div class="terminal-line">
+                                                <span class="line-number">4</span>
+                                                <span class="terminal-text success">✓ Leveraging staging namespace platform monitoring capabilities</span>
+                                            </div>
+                                            <div class="terminal-line">
+                                                <span class="line-number">5</span>
+                                                <span class="terminal-text success">🚀 Now monitoring are active</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            
+                    <!-- Easy Integration -->
+                    <div class="showcase-panel" id="integration">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">FITS INTO ANY STACK</div>
+                                <h3>Modernize Without the Pain</h3>
+                                <p class="panel-description">Tempted by new offerings but dreading costly migrations or failed POCs? Chiron delivers critical insights with zero friction and immediate value.</p>
+                                
+                                <div class="integration-features">
+                                    <div class="integration-feature">
+                                        <div class="feature-icon-small">⚡</div>
+                                        <div class="feature-content">
+                                            <h4>Zero-Disruption Deployment</h4>
+                                            <p>Drop into existing infrastructure without migration headaches or failed POCs</p>
+                    </div>
+                    </div>
+                                    <div class="integration-feature">
+                                        <div class="feature-icon-small">🔗</div>
+                                        <div class="feature-content">
+                                            <h4>Universal Connectivity</h4>
+                                            <p>Works with Kubernetes, Kafka, Postgres, AWS, GCP, and any telemetry source</p>
+                </div>
+            </div>
+                                    <div class="integration-feature">
+                                        <div class="feature-icon-small">📊</div>
+                                        <div class="feature-content">
+                                            <h4>Immediate Value</h4>
+                                            <p>Start receiving correlated alerts with root cause context from day one in easy integration</p>
+        </div>
+            </div>
+            </div>
+                            
+                                </div>
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <img src="images/Deployment_transparent.png" alt="Integration diagram" class="visual-image">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faster-resolution-section">
+        <!-- Header -->
+        <div class="faster-resolution-header">
+            <h2 class="faster-resolution-title">
+                Faster Resolution with Chiron
+            </h2>
+            <p class="faster-resolution-subtitle">
+                Traditional monitoring leaves you sifting through logs, querying databases, and coordinating across teams. 
+                <strong class="highlight-text">Chiron changes that</strong>  pinpointing root causes and cutting resolution time from hours to minutes.
+            </p>
+        </div>
+
+        <!-- Comparison Section -->
+    <div class="comparison-section">
+        <!-- Mobile Tab Navigation -->
+        <div class="comparison-mobile-tabs">
+            <button class="comparison-tab-btn active" data-tab="without">Without Chiron</button>
+            <button class="comparison-tab-btn" data-tab="with">With Chiron</button>
+        </div>
+        
+        <!-- Left Half - Without Chiron -->
+        <div class="comparison-half without-chiron" id="without-tab">
+            <div class="comparison-title">
+                <h3 class="comparison-title-text">Without Chiron</h3>
+                <div class="comparison-bar-wrapper">
+                    <div class="comparison-title-bar"></div>
+                    <span class="comparison-bar-text">in 2 hours</span>
+                </div>
+            </div>
+            
+            <!-- Alert Box -->
+            <div class="comparison-alert-box comparison-red-alert">
+                <div class="comparison-alert-title">ALERT: High Response Time</div>
+                <div class="comparison-alert-details">
+                    <div class="comparison-alert-detail">Service: checkout-api</div>
+                    <div class="comparison-alert-detail">Metric: 95th percentile > 2s</div>
+                    <div class="comparison-alert-detail">Time: 14:23:45</div>
+                </div>
+            </div>
+            
+            <!-- New Empty Section -->
+            <div class="new-section">
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Check Application Logs</span>
+                    <span class="comparison-content-right">10 minutes</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Query Database Performance</span>
+                    <span class="comparison-content-right">25 minutes</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Examine Network Metrics</span>
+                    <span class="comparison-content-right">35 minutes</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Coordinate with 3 teams</span>
+                    <span class="comparison-content-right">25 minutes</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Eventually find: payment DB lock contention</span>
+                    <span class="comparison-content-right">10 minutes</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vertical Divider -->
+        <div class="comparison-vertical-divider"></div>
+        
+        <!-- Right Half - With Chiron -->
+        <div class="comparison-half with-chiron" id="with-tab">
+            <div class="comparison-title">
+                <h3 class="comparison-title-text">With Chiron</h3>
+                <div class="comparison-bar-wrapper">
+                    <div class="comparison-title-bar"></div>
+                    <span class="comparison-bar-text">in only 5 mins</span>
+                </div>
+            </div>
+            
+            <!-- Alert Box -->
+            <div class="comparison-alert-box comparison-grey-alert">
+                <div class="comparison-alert-header">
+                    <span class="comparison-warning-icon">⚠️</span>
+                    <span class="comparison-alert-title">Checkout Performance Degraded</span>
+                </div>
+                <div class="comparison-alert-content">
+                    <div class="comparison-root-cause">payment-db connection pool exhausted</div>
+                    <div class="comparison-service-tags">
+                        <span class="comparison-service-tag">🌿 payment_db</span>
+                        <span class="comparison-service-tag">🌿 payment_service</span>
+                        <span class="comparison-service-tag">🌿 checkout_api</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Empty Section -->
+            <div class="new-section">
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Root cause identified</span>
+                    <span class="comparison-content-right">Realtime</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Impact scope known</span>
+                    <span class="comparison-content-right">Realtime</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Fix recommendation provided</span>
+                    <span class="comparison-content-right">1 minute</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Execute scaling action</span>
+                    <span class="comparison-content-right">4 minutes</span>
+                </div>
+                <div class="comparison-content-row">
+                    <span class="comparison-content-left">Monitor recovery</span>
+                    <span class="comparison-content-right">Realtime</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+  
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="section use-cases-section">
+        <div class="container solutions-container">
+            <div class="section-header solutions-header">
+                <h2 class="solutions-title">Real-World Ways Teams Use Chiron</h2>
+                <p class="section-subtitle solutions-subtitle">See how engineering teams solve critical problems with Chiron's in-flight correlation</p>
+                                </div>
+
+            <!-- Slider Navigation -->
+            <div class="slider-navigation">
+                <button class="slider-nav-btn prev-btn" id="prevBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="slider-indicators">
+                    <button class="slider-dot active" data-slide="0"></button>
+                    <button class="slider-dot" data-slide="1"></button>
+                    <button class="slider-dot" data-slide="2"></button>
+                    <button class="slider-dot" data-slide="3"></button>
+                </div>
+                
+                <button class="slider-nav-btn next-btn" id="nextBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slider Content -->
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    
+                      <!-- Slide 2: Live Streaming -->
+                      <div class="slider-slide" data-slide="1">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">LIVE STREAMING</div>
+                                <h3>Buffering SLA Breach In Live Streaming</h3>
+                                <p class="panel-description">For media platforms, even seconds of buffering mean lost viewers and revenue.</p>
+                                
+                                <div class="feature-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">📺</div>
+                                        <div class="highlight-text">
+                                            <strong>Real-Time Pipeline Monitoring</strong>
+                                            <span>Monitors entire streaming pipeline in real time</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">🔍</div>
+                                        <div class="highlight-text">
+                                            <strong>Precise Root Cause</strong>
+                                            <span>Correlates buffering events with backend I/O metrics</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">🎯</div>
+                                        <div class="highlight-text">
+                                            <strong>Exact Component Identification</strong>
+                                            <span>Pinpoints exact component causing degradation</span>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <img src="images/Deployment_transparent.png" alt="Streaming pipeline monitoring" class="visual-image">
+                                </div>
+                                <div class="media-caption">CDN → encoder → backend correlation</div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    
+                    <!-- Slide 2: Live Streaming -->
+                    <div class="slider-slide" data-slide="1">
+                    <div class="panel-grid">
+                        <div class="panel-content">
+                            <div class="content-badge">LIVE STREAMING</div>
+                            <h3>Buffering SLA Breach In Live Streaming</h3>
+                            <p class="panel-description">For media platforms, even seconds of buffering mean lost viewers and revenue.</p>
+                            
+                            <div class="feature-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">📺</div>
+                                    <div class="highlight-text">
+                                        <strong>Real-Time Pipeline Monitoring</strong>
+                                        <span>Monitors entire streaming pipeline in real time</span>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🔍</div>
+                                    <div class="highlight-text">
+                                        <strong>Precise Root Cause</strong>
+                                        <span>Correlates buffering events with backend I/O metrics</span>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🎯</div>
+                                    <div class="highlight-text">
+                                        <strong>Exact Component Identification</strong>
+                                        <span>Pinpoints exact component causing degradation</span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="panel-visual">
+                            <div class="visual-container">
+                                <img src="images/Deployment_transparent.png" alt="Streaming pipeline monitoring" class="visual-image">
+                            </div>
+                            <div class="media-caption">CDN → encoder → backend correlation</div>
+                        </div>
+                    </div>
+                    </div>
+
+                      <!-- Slide 2: Live Streaming -->
+                      <div class="slider-slide" data-slide="1">
+                        <div class="panel-grid">
+                            <div class="panel-content">
+                                <div class="content-badge">LIVE STREAMING</div>
+                                <h3>Buffering SLA Breach In Live Streaming</h3>
+                                <p class="panel-description">For media platforms, even seconds of buffering mean lost viewers and revenue.</p>
+                                
+                                <div class="feature-highlights">
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">📺</div>
+                                        <div class="highlight-text">
+                                            <strong>Real-Time Pipeline Monitoring</strong>
+                                            <span>Monitors entire streaming pipeline in real time</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">🔍</div>
+                                        <div class="highlight-text">
+                                            <strong>Precise Root Cause</strong>
+                                            <span>Correlates buffering events with backend I/O metrics</span>
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <div class="highlight-icon">🎯</div>
+                                        <div class="highlight-text">
+                                            <strong>Exact Component Identification</strong>
+                                            <span>Pinpoints exact component causing degradation</span>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                            <div class="panel-visual">
+                                <div class="visual-container">
+                                    <img src="images/Deployment_transparent.png" alt="Streaming pipeline monitoring" class="visual-image">
+                                </div>
+                                <div class="media-caption">CDN → encoder → backend correlation</div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    
+                    
+                    
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="about-us" class="team-section">
+        <div class="team-container">
+            <div class="team-header">
+                <h2>The Chiron Team</h2>
+                <p class="team-subtitle">Chiron brings together 100+ years of engineering depth from hyperscale giants and unicorns.</p>
+            </div>
+
+            <!-- Company Logos Marquee -->
+            <div class="company-logos-marquee">
+                <div class="logos-track">
+                    <div class="logo-item">
+                <img src="images/logo_Google.png" alt="Google">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Microsoft.png" alt="Microsoft">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Salesforce.png" alt="Salesforce">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Confluent.png" alt="Confluent">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Nutanix.png" alt="Nutanix">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Rubrik.png" alt="Rubrik">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_IBM.png" alt="IBM">
+                    </div>
+                    <div class="logo-item">
+                <img src="images/logo_Veritas.png" alt="Veritas">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item">
+                        <img src="images/logo_Google.png" alt="Google">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Microsoft.png" alt="Microsoft">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Salesforce.png" alt="Salesforce">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Confluent.png" alt="Confluent">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Nutanix.png" alt="Nutanix">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Rubrik.png" alt="Rubrik">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_IBM.png" alt="IBM">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/logo_Veritas.png" alt="Veritas">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Founding Team -->
+            <div class="founding-team-section">
+                
+                <div class="founding-team-container">
+                    <p class="team-description">Chiron brings together 100+ years of engineering depth from hyperscale giants and unicorns.</p>
+                </div>
+            </div>
+
+            <!-- Advisors & Investors -->
+            <div class="advisors-section">
+                <h5>Backed by investors and advisors from great organizations</h5>
+                <!-- Company Logos -->
+                <div class="ch-website-logo-block">
+                    <div class="ch-logo-36 w-embed">
+                        <svg
+                            viewBox="0 0 1140 377"
+                            width="100%"
+                            height="100%"
+                            class=""
+                            data-class=""
+                            data-component="svg"
+                            data-name="Svg - Copy"
+                            data-preview-node-id="687060c555e276f3c202c9d9"
+                        >
+                            <g>
+                                <path
+                                    d="M148.602 292.426C67.9762 292.426 0.220947 226.839 0.220947 146.213C0.220947 65.598 67.9762 0 148.602 0C193.182 0 224.892 17.4467 248.842 40.2448L220.567 68.5197C203.497 52.4763 180.312 39.9934 148.476 39.9934C89.6328 39.9934 43.6493 87.3697 43.6493 146.213C43.6493 205.057 89.6328 252.433 148.476 252.433C186.679 252.433 208.335 237.154 222.347 223.142C233.804 211.685 241.197 195.38 244.129 172.834H148.602V133.73H282.971C284.374 140.862 285.139 148.507 285.139 157.806C285.139 187.736 276.981 224.797 250.497 251.291C224.892 278.163 192.03 292.426 148.602 292.426Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                                <path
+                                    d="M491.211 198.302C491.211 252.569 448.924 292.426 396.961 292.426C344.998 292.426 302.711 252.433 302.711 198.302C302.711 143.794 344.998 104.188 396.961 104.188C448.924 104.188 491.211 143.668 491.211 198.302ZM449.951 198.302C449.951 164.424 425.362 141.249 396.961 141.249C368.56 141.249 343.982 164.424 343.982 198.302C343.982 231.803 368.56 255.365 396.961 255.365C425.362 255.365 449.951 231.803 449.951 198.302Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                                <path
+                                    d="M695 198.302C695 252.569 652.714 292.426 600.75 292.426C548.777 292.426 506.5 252.433 506.5 198.302C506.5 143.794 548.777 104.188 600.75 104.188C652.714 104.188 695 143.668 695 198.302ZM653.73 198.302C653.73 164.424 629.151 141.249 600.75 141.249C572.339 141.249 547.761 164.424 547.761 198.302C547.761 231.803 572.339 255.365 600.75 255.365C629.151 255.365 653.73 231.803 653.73 198.302Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                                <path
+                                    d="M887.312 109.791V278.928C887.312 348.474 846.303 377 797.775 377C752.179 377 724.668 346.306 714.353 321.34L750.399 306.312C756.766 321.591 772.558 339.813 797.775 339.813C828.856 339.813 848.094 320.576 848.094 284.53V271.032H846.691C837.391 282.499 819.557 292.426 797.147 292.426C750.022 292.426 709.002 251.417 709.002 198.689C709.002 145.574 750.022 104.188 797.147 104.188C819.557 104.188 837.391 114.116 846.691 125.195H848.094V109.916H887.312V109.791ZM850.89 198.689C850.89 165.576 828.731 141.249 800.581 141.249C772.055 141.249 750.273 165.451 750.273 198.689C750.273 231.551 772.055 255.365 800.581 255.365C828.856 255.365 850.89 231.426 850.89 198.689Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                                <path
+                                    d="M951.005 9.93811V286.698H909.608V9.93811H951.005Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                                <path
+                                    d="M1105.88 229.258L1137.98 250.653C1127.65 265.942 1102.69 292.426 1059.52 292.426C1006.03 292.426 966.032 251.04 966.032 198.302C966.032 142.265 1006.28 104.188 1054.81 104.188C1103.71 104.188 1127.52 143.03 1135.42 164.047L1139.76 174.739L1013.92 226.839C1023.6 245.689 1038.5 255.365 1059.52 255.365C1080.52 255.365 1095.18 245.05 1105.88 229.258ZM1007.04 195.38L1091.23 160.476C1086.64 148.758 1072.63 140.485 1056.33 140.485C1035.19 140.485 1006.03 159.084 1007.04 195.38Z"
+                                    fill="#3d3d4e"
+                                ></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="ch-logo-36 w-embed">
+                        <svg
+                            height="100%"
+                            viewBox="0 0 120 38"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M95.733 12.692C94.332 12.692 93.699 13.097 92.402 14.717V14.017C92.402 13.171 92.296 13.061 91.49 13.061H90.824C90.018 13.061 89.912 13.171 89.912 14.018V27.378C89.912 28.225 90.018 28.335 90.824 28.335H91.49C92.296 28.335 92.402 28.225 92.402 27.378V20.274C92.402 18.434 92.578 17.33 92.963 16.594C93.496 15.578 94.656 15.069 95.729 15.226C95.979 15.262 96.2 15.35 96.439 15.434C96.527 15.465 96.629 15.489 96.716 15.448C96.8046 15.4026 96.8803 15.3356 96.936 15.253C97.078 15.061 97.17 14.83 97.278 14.617L97.487 14.201C97.629 13.907 97.733 13.686 97.733 13.576C97.767 13.097 96.821 12.692 95.733 12.692ZM51.417 12.692C50.015 12.692 49.383 13.097 48.086 14.717V14.017C48.086 13.171 47.981 13.061 47.174 13.061H46.508C45.701 13.061 45.596 13.171 45.596 14.018V27.378C45.596 28.225 45.701 28.335 46.508 28.335H47.174C47.981 28.335 48.086 28.225 48.086 27.378V20.274C48.086 18.434 48.261 17.33 48.646 16.594C49.179 15.578 50.339 15.069 51.412 15.226C51.662 15.262 51.884 15.35 52.122 15.434C52.209 15.465 52.312 15.489 52.4 15.448C52.4878 15.4023 52.5628 15.3352 52.618 15.253C52.761 15.061 52.853 14.83 52.961 14.617L53.171 14.201C53.311 13.907 53.416 13.686 53.416 13.576C53.451 13.097 52.504 12.692 51.417 12.692ZM58.63 21.967C58.63 23.402 58.77 24.176 59.086 24.838C59.576 25.795 60.664 26.384 61.926 26.384C63.153 26.384 64.241 25.796 64.732 24.838C65.048 24.176 65.188 23.402 65.188 21.967V14.017C65.188 13.17 65.293 13.06 66.1 13.06H66.766C67.573 13.06 67.678 13.17 67.678 14.017V22.261C67.678 24.507 67.328 25.721 66.346 26.862C65.293 28.114 63.715 28.776 61.926 28.776C60.102 28.776 58.526 28.114 57.473 26.862C56.491 25.722 56.14 24.507 56.14 22.262V14.017C56.14 13.17 56.245 13.06 57.052 13.06H57.718C58.525 13.06 58.63 13.17 58.63 14.017V21.967ZM74.076 20.68C74.076 24.066 76.076 26.385 78.952 26.385C81.722 26.385 83.721 23.955 83.721 20.605C83.721 17.515 81.651 15.121 78.917 15.121C76.076 15.121 74.076 17.405 74.076 20.68ZM74.252 15.232C75.689 13.502 77.233 12.729 79.337 12.729C83.335 12.729 86.281 16.079 86.281 20.679C86.281 25.354 83.3 28.776 79.267 28.776C77.233 28.776 75.62 27.966 74.252 26.238V27.378C74.252 28.225 74.147 28.335 73.34 28.335H72.674C71.867 28.335 71.761 28.225 71.761 27.378V2.46003C71.761 1.61403 71.867 1.50403 72.674 1.50403H73.34C74.147 1.50403 74.252 1.61403 74.252 2.46003V15.232ZM103.473 27.378C103.473 28.225 103.367 28.335 102.561 28.335H101.894C101.087 28.335 100.983 28.225 100.983 27.378V14.018C100.983 13.171 101.087 13.06 101.894 13.06H102.561C103.367 13.06 103.473 13.171 103.473 14.017V27.378ZM104.034 7.28403C104.034 8.31603 103.227 9.16403 102.245 9.16403C101.263 9.16403 100.457 8.31603 100.457 7.24703C100.457 6.25203 101.263 5.40503 102.245 5.40503C103.227 5.40503 104.034 6.25203 104.034 7.28503V7.28403ZM115.448 13.502C115.868 13.06 115.868 13.06 116.465 13.06H117.552C118.183 13.06 118.429 13.245 118.429 13.65C118.429 13.796 118.288 14.017 118.008 14.312L112.992 19.576L119.34 27.084C119.586 27.414 119.727 27.636 119.727 27.784C119.727 28.151 119.446 28.335 118.814 28.335H117.727C117.096 28.335 117.096 28.335 116.71 27.857L111.239 21.378L110.607 22.041V27.378C110.607 28.225 110.502 28.335 109.696 28.335H109.03C108.223 28.335 108.118 28.225 108.118 27.378V2.46003C108.118 1.61403 108.223 1.50403 109.03 1.50403H109.696C110.502 1.50403 110.607 1.61403 110.607 2.46003V18.692L115.448 13.502Z"
+                                fill="#3D3D4D"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="ch-logo-36 w-embed">
+                        <svg
+                            height="100%"
+                            viewBox="0 0 200 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <text x="10" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#3D3D4D">NUTANIX</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Individual Advisors & Investors removed -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section id="try-us" class="cta-section">
+        <div class="cta-wrapper">
+            <div class="cta-hero">
+                <h2 class="cta-hero-title">Ready to see Chiron in action?</h2>
+                <p class="cta-hero-subtitle">Experience how SLA lapses are detected in real time, with root cause identified instantly—no query, no noise, just one clear alert.</p>
+            </div>
+            
+            <div class="cta-cards">
+                <!-- Quick Start Card -->
+                <div class="cta-card quick-start">
+                    <div class="card-badge">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                        <span>Quick Start</span>
+                    </div>
+                    
+                    <h3 class="card-title">Get Chiron running in your environment with simple CLI commands. Works with Kubernetes, Kafka, and Postgres.</h3>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-tabs">
+                                <span class="code-tab active">Terminal</span>
+                        </div>
+                            <div class="code-actions">
+                                <button class="copy-btn" onclick="copyCode()">
+                                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text"><span class="prompt">$</span> chiron rule create "Monitor Kafka GET APIs" --namespace kafka</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text success">✓ Creating monitor for Kafka namespace...</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text success">✓ Analyzing Kafka API endpoints...</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text success">✓ Rule created: kafka_get_api_monitor</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text"><span class="prompt">$</span> chiron start</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">6</span>
+                                <span class="code-text success">🚀 Now monitoring are active. View: <span class="highlight">localhost:3000</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="#" class="btn-primary">
+                            <span>Get CLI Access</span>
+                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Meeting Card -->
+                <div class="cta-card meeting">
+                    <div class="card-badge">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                        <span>Custom POC</span>
+                    </div>
+                    
+                    <h3 class="card-title">Request a Meeting or Custom POC</h3>
+                    <p class="card-description">If you want to know more about Chiron or want to try Chiron in your specific environment, just drop us a message by clicking the request button.</p>
+                    
+                    <div class="clean-process">
+                        <div class="process-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Identify</h4>
+                                    <p>Critical SLA and its dependencies and setup</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Deploy</h4>
+                                    <p>Install and add connectors or custom connectors (optional)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Activate</h4>
+                                    <p>Fully functional deployment with monitoring</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Observe</h4>
+                                    <p>Monitor SLA for desired days and fine-tune</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="mailto:hello@chiron.ai" class="btn-primary">
+                            <span>Send Request</span>
+                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/chiron-logo-transparent-small_1chiron-logo-transparent-small.png" alt="Chiron Logo">
+                        <span class="footer-logo-text">CHIRON</span>
+                    </div>
+                    <p class="footer-description">Real-time SLA monitoring with instant root cause identification. No query, no noise, just one clear alert.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Product</h4>
+                        <ul class="footer-list">
+                            <li><a href="#product">Features</a></li>
+                            <li><a href="#product">Architecture</a></li>
+                            <li><a href="#product">Integrations</a></li>
+                            <li><a href="#product">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Solutions</h4>
+                        <ul class="footer-list">
+                            <li><a href="#solutions">Enterprise</a></li>
+                            <li><a href="#solutions">SaaS Monitoring</a></li>
+                            <li><a href="#solutions">Microservices</a></li>
+                            <li><a href="#solutions">DevOps</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Resources</h4>
+                        <ul class="footer-list">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="#about-us">About</a></li>
+                            <li><a href="#about-us">Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2025 Chiron. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider JavaScript -->
+    <script>
+        class Slider {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.slider-slide');
+                this.dots = document.querySelectorAll('.slider-dot');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.totalSlides = this.slides.length;
+                
+                this.init();
+            }
+            
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                this.updateSlider();
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlider();
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateSlider();
+            }
+            
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateSlider();
+            }
+            
+            updateSlider() {
+                // Update slides
+                this.slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev', 'next');
+                    
+                    if (index === this.currentSlide) {
+                        slide.classList.add('active');
+                    } else if (index === (this.currentSlide - 1 + this.totalSlides) % this.totalSlides) {
+                        slide.classList.add('prev');
+                    } else if (index === (this.currentSlide + 1) % this.totalSlides) {
+                        slide.classList.add('next');
+                    }
+                });
+                
+                // Update dots
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+                
+                // Update navigation buttons
+                this.prevBtn.disabled = false;
+                this.nextBtn.disabled = false;
+            }
+        }
+        
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new Slider();
+        });
+    </script>
+   
+</body>
+</html>
+
