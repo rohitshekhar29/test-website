@@ -415,35 +415,47 @@ a {
 .social-proof-text {
     font-size: 0.875rem;
     color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
-.company-logos {
+.early-adopters {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.logo-item {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
+.adopter-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-surface);
     border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
     transition: var(--transition-base);
 }
 
-.logo-item:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-border-hover);
+.adopter-badge:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
 }
 
-.logo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.adopter-icon {
+    font-size: 1.25rem;
+}
+
+.adopter-text {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
 }
 
 /* Section Styles */
@@ -1020,6 +1032,207 @@ section {
     }
 }
 
+.team-grid {
+    margin-top: var(--space-3xl);
+}
+
+.subsection-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text-primary);
+}
+
+.subsection-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: var(--space-3xl) 0 var(--space-xl);
+    color: var(--color-text-primary);
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto var(--space-3xl);
+}
+
+.founder-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-base);
+}
+
+.founder-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.founder-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-border);
+}
+
+.founder-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-primary);
+}
+
+.founder-role {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.founder-bio {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.testimonial-box {
+    max-width: 900px;
+    margin: 0 auto var(--space-3xl);
+    padding: var(--space-xl);
+    background: linear-gradient(135deg, rgba(28, 115, 244, 0.05), rgba(34, 211, 238, 0.05));
+    border: 1px solid rgba(28, 115, 244, 0.2);
+    border-radius: var(--radius-lg);
+    position: relative;
+}
+
+.quote-icon {
+    color: var(--color-primary);
+    opacity: 0.3;
+    margin-bottom: var(--space-sm);
+}
+
+.testimonial-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+}
+
+.testimonial-author {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    margin: 0;
+}
+
+.founding-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: var(--transition-base);
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-md);
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--space-sm);
+    display: block;
+    border: 2px solid var(--color-border);
+}
+
+.member-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.advisors-section {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-3xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.advisor-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-base);
+}
+
+.advisor-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.advisor-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--color-border);
+}
+
+.advisor-info h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.advisor-company {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.advisor-role {
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 0;
+}
+
 /* CTA Section */
 .cta-section {
     padding: var(--space-3xl) 0;
@@ -1292,6 +1505,47 @@ section {
 
     .demo-feature-item {
         padding: var(--space-md);
+    }
+
+    .early-adopters {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .adopter-badge {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founding-team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--space-md);
+    }
+
+    .advisors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advisor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-box {
+        padding: var(--space-md);
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
     }
 }
 
