@@ -139,6 +139,8 @@ a {
 .logo-image {
     height: 32px;
     width: auto;
+    background: transparent;
+    mix-blend-mode: normal;
 }
 
 .nav-links {
