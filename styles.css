@@ -895,6 +895,33 @@ section {
     transform: scale(1.1);
 }
 
+.demo-note {
+    text-align: center;
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: rgba(28, 115, 244, 0.05);
+    border: 1px solid rgba(28, 115, 244, 0.2);
+    border-radius: var(--radius-md);
+}
+
+.demo-note p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.demo-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-base);
+}
+
+.demo-link:hover {
+    border-bottom-color: var(--color-primary);
+}
+
 .demo-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
