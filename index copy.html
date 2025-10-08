@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiron - Real-Time SLA Monitoring & Observability Platform</title>
+    <meta name="description" content="Chiron delivers instant SLA breach alerts with root cause identification. Stream-first observability platform that cuts MTTR by 10x and reduces costs by 90%.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop stop-color="#1c73f4"/>
+                            <stop offset="1" stop-color="#22d3ee"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>CHIRON</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#demo" class="btn-secondary">Watch Demo</a>
+                <a href="contact.html" class="btn-primary">Get Started</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <span>Real-Time Observability</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="gradient-text">Know What Breaks</span><br>
+                    Your SLA in Real-Time
+                </h1>
+
+                <p class="hero-subtitle">
+                    The world's first observability-first stream engine. Do deep, layered pattern matching across metrics, logs, and traces without store-and-query or time-window limits. SLA alerts surface instantly, with root-cause correlation built in.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">90%</div>
+                        <div class="stat-label">Cost Reduction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">Faster Resolution</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">&lt;5min</div>
+                        <div class="stat-label">Setup Time</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary btn-lg">
+                        <span>Request Demo</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn-secondary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <span>See how the future works - 1:16 min</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-diagram-wrapper">
+                    <img src="images/img-Chiron-architecture.gif" alt="Chiron Cascaded Architecture" class="hero-diagram">
+                </div>
+                <div class="hero-diagram-wrapper" style="margin-top: 2rem;">
+                    <img src="Screenshot 2025-10-07 at 6.04.45 PM.png" alt="Streaming Correlation Engine" class="hero-diagram">
+                </div>
+            </div>
+        </div>
+
+        <div class="social-proof">
+            <p class="social-proof-text">Our early beta adopters across enterprise verticals</p>
+            <div class="early-adopters">
+                <div class="adopter-badge">
+                    <div class="adopter-icon">🧬</div>
+                    <span class="adopter-text">MedTech Genome</span>
+                </div>
+                <div class="adopter-badge">
+                    <div class="adopter-icon">🔒</div>
+                    <span class="adopter-text">Security Unicorn</span>
+                </div>
+                <div class="adopter-badge">
+                    <div class="adopter-icon">📈</div>
+                    <span class="adopter-text">Post IPO Data Infra</span>
+                </div>
+                <div class="adopter-badge">
+                    <div class="adopter-icon">🌐</div>
+                    <span class="adopter-text">Global Fortune 100 Streaming</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <video controls poster="images/img-coming-soon.png" class="fullwidth-video">
+                <source src="images/Video-Demo-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">The Problem</span>
+                <h2>Traditional Monitoring Is Broken</h2>
+                <p>When SLAs break, you waste hours hunting for the root cause</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Hours of Investigation</h3>
+                    <p>Teams spend 2-4 hours per incident correlating logs, metrics, and traces across multiple systems</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Expensive Storage</h3>
+                    <p>Store-and-query solutions charge massive fees for data retention and analysis</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔍</div>
+                    <h3>Manual Correlation</h3>
+                    <p>Engineers manually piece together signals from databases, networks, and applications</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Alert Fatigue</h3>
+                    <p>Too many alerts, most are false positives, real issues get buried in noise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Chiron</span>
+                <h2>Stream-First Observability</h2>
+                <p>Netflix and Cribl proved streaming cuts costs by 90%. Chiron takes it further—delivering instant root cause identification.</p>
+            </div>
+
+            <div class="features-showcase">
+                <div class="feature-main">
+                    <div class="feature-content">
+                        <div class="feature-tag">Core Technology</div>
+                        <h3>In-Flight Correlation Engine</h3>
+                        <p>Chiron correlates metrics, logs, and traces in real-time as they stream through—no storage, no queries, no delays.</p>
+
+                        <ul class="feature-benefits">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Instant root cause identification</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Zero storage overhead</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Cross-layer dependency mapping</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <img src="images/CHIRON_ARCH.png" alt="Chiron Architecture" class="feature-image">
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Cascaded Alerts</h4>
+                        <p>One alert, complete context. See the SLA breach and every downstream dependency that contributed to it.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h4>AI-Powered Flows</h4>
+                        <p>Use AI to generate monitoring flows, compiled into auditable operators that run on-box with zero latency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔌</div>
+                        <h4>Drop-In Integration</h4>
+                        <p>Works with Kubernetes, Kafka, Postgres, and any telemetry source. No migration required.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Data Privacy</h4>
+                        <p>All processing happens in your infrastructure. Your data never leaves your environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">How It Works</span>
+                <h2>From Alert to Resolution in Minutes</h2>
+            </div>
+
+            <div class="comparison-container">
+                <div class="comparison-side">
+                    <div class="comparison-header">
+                        <h3>Without Chiron</h3>
+                        <span class="time-badge bad">2+ Hours</span>
+                    </div>
+                    <div class="comparison-steps">
+                        <div class="step">
+                            <span class="step-time">10 min</span>
+                            <span class="step-text">Alert received: high latency</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">25 min</span>
+                            <span class="step-text">Check application logs</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">35 min</span>
+                            <span class="step-text">Query database metrics</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">40 min</span>
+                            <span class="step-text">Coordinate with 3 teams</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">20 min</span>
+                            <span class="step-text">Find root cause: DB lock contention</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-divider">
+                    <span>VS</span>
+                </div>
+
+                <div class="comparison-side">
+                    <div class="comparison-header">
+                        <h3>With Chiron</h3>
+                        <span class="time-badge good">5 Minutes</span>
+                    </div>
+                    <div class="comparison-steps">
+                        <div class="step">
+                            <span class="step-time">Instant</span>
+                            <span class="step-text">Alert: Checkout latency + root cause identified</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">Instant</span>
+                            <span class="step-text">Full dependency chain shown</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">1 min</span>
+                            <span class="step-text">Review recommendation</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-time">4 min</span>
+                            <span class="step-text">Apply fix & monitor recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="use-cases-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Use Cases</span>
+                <h2>Built for Production</h2>
+                <p>Real teams solving real problems</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-image">
+                        <img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Streaming">
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Live Streaming</h3>
+                        <p>Monitor buffering SLAs across CDN, encoder, and backend. Instantly identify which component is causing degradation.</p>
+                        <div class="use-case-metrics">
+                            <span>CDN</span>
+                            <span>Encoder</span>
+                            <span>Storage I/O</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-image">
+                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-commerce">
+                    </div>
+                    <div class="use-case-content">
+                        <h3>E-Commerce Checkout</h3>
+                        <p>Track payment latency from API → database → payment gateway. Know exactly where delays occur.</p>
+                        <div class="use-case-metrics">
+                            <span>API</span>
+                            <span>Database</span>
+                            <span>Payment Gateway</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-image">
+                        <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Microservices">
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Microservices</h3>
+                        <p>Trace requests across 50+ services. Identify bottlenecks in complex dependency chains instantly.</p>
+                        <div class="use-case-metrics">
+                            <span>Service Mesh</span>
+                            <span>Databases</span>
+                            <span>Queues</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Team</span>
+                <h2>The Chiron Team</h2>
+                <p>Together, we bring more than 100 years of deep engineering experience across some of the world's most demanding environments—from hyperscale systems at Google and Salesforce to the chaos of hyper-growth pre-IPO companies like Confluent and Nutanix.</p>
+            </div>
+
+            <div class="company-marquee">
+                <div class="marquee-track">
+                    <img src="images/logo_Google.png" alt="Google">
+                    <img src="images/logo_Microsoft.png" alt="Microsoft">
+                    <img src="images/logo_Salesforce.png" alt="Salesforce">
+                    <img src="images/logo_Confluent.png" alt="Confluent">
+                    <img src="images/logo_Nutanix.png" alt="Nutanix">
+                    <img src="images/logo_Rubrik.png" alt="Rubrik">
+                    <img src="images/logo_IBM.png" alt="IBM">
+                    <img src="images/logo_Veritas.png" alt="Veritas">
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="founders-section">
+                    <h3 class="subsection-title">Founders</h3>
+                    <div class="founders-grid">
+                        <div class="founder-card">
+                            <img src="images/team-RohitShekhar.png" alt="Rohit Shekhar" class="founder-avatar">
+                            <div class="founder-info">
+                                <h4>Rohit Shekhar</h4>
+                                <p class="founder-role">Founder, CEO</p>
+                                <p class="founder-bio">Led critical infrastructure at Confluent and Google</p>
+                            </div>
+                        </div>
+                        <div class="founder-card">
+                            <img src="images/team-PunitAgarwalla.png" alt="Punit Agarwalla" class="founder-avatar">
+                            <div class="founder-info">
+                                <h4>Punit Agarwalla</h4>
+                                <p class="founder-role">Co-Founder, COO</p>
+                                <p class="founder-bio">Product and operations leader from top tech companies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-box">
+                        <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M9.135 9.256c-1.237-.619-2.01-1.807-2.01-3.256 0-2.001 1.567-3.75 3.876-3.75 2.143 0 3.874 1.75 3.874 3.75 0 3.257-3.874 6.75-7.115 9l-1.76-1.244c2.013-1.689 3.135-3.49 3.135-4.5z M21.135 9.256c-1.237-.619-2.01-1.807-2.01-3.256 0-2.001 1.567-3.75 3.876-3.75 2.143 0 3.874 1.75 3.874 3.75 0 3.257-3.874 6.75-7.115 9l-1.76-1.244c2.013-1.689 3.135-3.49 3.135-4.5z" fill="currentColor"/>
+                        </svg>
+                        <p class="testimonial-text">"Rohit was very hands-on. He personally designed, implemented and delivered a service that audits the correctness of Kafka data in Confluent Cloud. This service identified multiple subtle correctness issues due to software bugs and Cloud service failures before they impact the end users. It helped significantly improve the quality of Confluent Cloud."</p>
+                        <p class="testimonial-author">— Jun Rao, Confluent Co-founder</p>
+                    </div>
+
+                    <h4 class="subsection-subtitle">Founding Team</h4>
+                    <div class="founding-team-grid">
+                        <div class="team-member">
+                            <img src="images/team-AjaySrivastava.png" alt="Ajay Srivastava">
+                            <p class="member-name">Ajay Srivastava</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-DevanshSaxena.png" alt="Devansh Saxena">
+                            <p class="member-name">Devansh Saxena</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-GargiBasak.png" alt="Gargi Basak">
+                            <p class="member-name">Gargi Basak</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-HemantKashniyal.png" alt="Hemant Kashniyal">
+                            <p class="member-name">Hemant Kashniyal</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-SagarKabadi.png" alt="Sagar Kabadi">
+                            <p class="member-name">Sagar Kabadi</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-YashRanka.png" alt="Yash Ranka">
+                            <p class="member-name">Yash Ranka</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/team-PraveenPadia.png" alt="Praveen Padia">
+                            <p class="member-name">Praveen Padia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advisors-section">
+                <h3 class="subsection-title">Advisors & Investors</h3>
+                <div class="advisors-grid">
+                    <div class="advisor-card">
+                        <img src="images/team-GordenChaffee.png" alt="Gorden Chaffee" class="advisor-avatar">
+                        <div class="advisor-info">
+                            <h4>Gorden Chaffee</h4>
+                            <p class="advisor-company">ex - Sr Director, Google<br>ex - SVP, Riverbed</p>
+                            <p class="advisor-role">Advisor, Mentor</p>
+                        </div>
+                    </div>
+                    <div class="advisor-card">
+                        <img src="images/team-GyanKapur.png" alt="Gyan Kapur" class="advisor-avatar">
+                        <div class="advisor-info">
+                            <h4>Gyan Kapur</h4>
+                            <p class="advisor-company">Co-Managing Partner<br>Surface Ventures</p>
+                            <p class="advisor-role">VC, Investor</p>
+                        </div>
+                    </div>
+                    <div class="advisor-card">
+                        <img src="images/team-PrasenjitSarkar.png" alt="Dr. Prasenjit Sarkar" class="advisor-avatar">
+                        <div class="advisor-info">
+                            <h4>Dr. Prasenjit Sarkar</h4>
+                            <p class="advisor-company">DE, Rubrik</p>
+                            <p class="advisor-role">Advisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Cut Resolution Time by 10x?</h2>
+                <p>See how Chiron delivers instant root cause identification for SLA breaches</p>
+
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary btn-lg">
+                        <span>Request a Demo</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@chiron.ai" class="btn-secondary btn-lg">
+                        <span>Contact Sales</span>
+                    </a>
+                </div>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>5-minute setup</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>No migration required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Data stays in your environment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#gradient2)"/>
+                            <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                                    <stop stop-color="#1c73f4"/>
+                                    <stop offset="1" stop-color="#22d3ee"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>CHIRON</span>
+                    </div>
+                    <p>Real-time SLA monitoring with instant root cause identification.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#use-cases">Use Cases</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chiron. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
