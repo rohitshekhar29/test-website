@@ -134,10 +134,11 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--space-xs);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+}
+
+.logo-image {
+    height: 32px;
+    width: auto;
 }
 
 .nav-links {
