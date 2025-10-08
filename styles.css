@@ -249,12 +249,14 @@ a {
 }
 
 .hero-section .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-3xl);
     align-items: center;
     position: relative;
     z-index: 1;
+    max-width: 100%;
+    padding: 0 var(--space-xl);
 }
 
 .hero-content {
@@ -263,6 +265,8 @@ a {
     gap: var(--space-lg);
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .hero-badge {
@@ -301,7 +305,7 @@ a {
 .hero-title {
     margin: 0;
     color: var(--color-text-primary);
-    max-width: 100%;
+    width: 100%;
     text-align: center;
 }
 
