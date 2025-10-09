@@ -1,56 +1,152 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll for navigation links
+// Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.firstName || !data.lastName || !data.email || !data.company) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.form-submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>Submitting...</span>';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message
+                alert('Thank you for your request! We\'ll get back to you soon.');
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    }
+    // Rotating Features Animation
+    const rotatingFeatures = document.querySelectorAll('.rotating-feature');
+    let currentFeatureIndex = 0;
+    
+    if (rotatingFeatures.length > 0) {
+        // Function to rotate features
+        function rotateFeatures() {
+            // Remove active class from current feature
+            rotatingFeatures[currentFeatureIndex].classList.remove('active');
+            
+            // Move to next feature
+            currentFeatureIndex = (currentFeatureIndex + 1) % rotatingFeatures.length;
+            
+            // Add active class to new feature
+            rotatingFeatures[currentFeatureIndex].classList.add('active');
+        }
+        
+        // Start rotation (change every 3 seconds)
+        setInterval(rotateFeatures, 3000);
+    }
+
+    // Product Section Tabs (Streaming Observability)
+    const productTabs = document.querySelectorAll('.tab-link');
+    const productTabContents = document.querySelectorAll('.tab-content');
+
+    productTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs and contents
+            productTabs.forEach(t => t.classList.remove('active'));
+            productTabContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show corresponding content
+            const tabId = this.getAttribute('data-tab');
+            const targetContent = document.getElementById(tabId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // Showcase Tabs (Product and Solutions sections)
+    const showcaseTabs = document.querySelectorAll('.showcase-tab');
+    const showcasePanels = document.querySelectorAll('.showcase-panel');
+
+    showcaseTabs.forEach((tab, index) => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Get the parent section to scope the tab switching
+            const parentSection = this.closest('section');
+            const sectionTabs = parentSection.querySelectorAll('.showcase-tab');
+            const sectionPanels = parentSection.querySelectorAll('.showcase-panel');
+            
+            // Remove active class from all tabs and panels in this section
+            sectionTabs.forEach(t => t.classList.remove('active'));
+            sectionPanels.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show corresponding panel with fade animation
+            const showcaseId = this.getAttribute('data-showcase');
+            const targetPanel = document.getElementById(showcaseId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offset = 80;
-                const targetPosition = target.offsetTop - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
     });
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-
+    // Professional dark theme scroll spy for navigation
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
+        const nav = document.querySelector('.nav');
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(15, 15, 19, 0.98)';
+            nav.style.borderBottomColor = 'rgba(163, 163, 180, 0.3)';
+            nav.style.backdropFilter = 'blur(24px)';
+            nav.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
         } else {
-            navbar.style.background = 'rgba(10, 10, 15, 0.8)';
-            navbar.style.boxShadow = 'none';
+            nav.style.background = 'rgba(15, 15, 19, 0.95)';
+            nav.style.borderBottomColor = 'rgba(163, 163, 180, 0.2)';
+            nav.style.backdropFilter = 'blur(20px)';
+            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
         }
-
-        lastScroll = currentScroll;
     });
-
-    // Mobile menu toggle
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileToggle.classList.remove('active');
-            });
-        });
-    }
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
@@ -61,123 +157,141 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
 
-    // Observe sections
-    document.querySelectorAll('section, .problem-card, .feature-card, .use-case-card').forEach(el => {
-        observer.observe(el);
+    // Observe all sections for fade-in effect
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(section);
     });
 
-    // Add hover effects to cards
-    const cards = document.querySelectorAll('.problem-card, .feature-card, .use-case-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-    });
-
-    // Company marquee duplication for seamless loop
-    const marqueeTrack = document.querySelector('.marquee-track');
-    if (marqueeTrack) {
-        const marqueeContent = marqueeTrack.innerHTML;
-        marqueeTrack.innerHTML += marqueeContent;
-    }
-
-    // Parallax effect for hero section
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = heroSection.querySelector('.hero-section::before');
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-    }
-
-    // Stats counter animation
-    const animateValue = (element, start, end, duration) => {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const value = Math.floor(progress * (end - start) + start);
-            element.textContent = value;
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
-    };
-
-    // Observe stats for animation
-    const statsObserver = new IntersectionObserver((entries) => {
+    // Team Section Scroll Animations
+    const teamObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const stats = entry.target.querySelectorAll('.stat-value');
-                stats.forEach(stat => {
-                    const text = stat.textContent;
-                    if (text.includes('%')) {
-                        const value = parseInt(text);
-                        animateValue(stat, 0, value, 2000);
-                        stat.textContent = value + '%';
-                    }
-                });
-                statsObserver.unobserve(entry.target);
+                entry.target.classList.add('animate-in');
             }
         });
     }, observerOptions);
 
-    const heroStats = document.querySelector('.hero-stats');
-    if (heroStats) {
-        statsObserver.observe(heroStats);
+    // Observe team elements for animation
+    const teamElements = document.querySelectorAll('.team-card, .founder-member, .founding-member, .advisor-member, .quote-card');
+    teamElements.forEach(el => {
+        teamObserver.observe(el);
+    });
+
+    // Mobile menu toggle (improved implementation)
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileMenuButton && navMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            
+            // Update button aria-expanded
+            const isExpanded = navMenu.classList.contains('show');
+            mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                navMenu.classList.remove('show');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 
-    // Performance optimization: Lazy load images
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                    imageObserver.unobserve(img);
+    // Comparison section mobile tabs
+    const comparisonTabBtns = document.querySelectorAll('.comparison-tab-btn');
+    const comparisonTabs = document.querySelectorAll('.comparison-half');
+    
+    if (comparisonTabBtns.length > 0 && comparisonTabs.length > 0) {
+        comparisonTabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and tabs
+                comparisonTabBtns.forEach(b => b.classList.remove('active'));
+                comparisonTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding tab
+                const targetTabElement = document.getElementById(targetTab + '-tab');
+                if (targetTabElement) {
+                    targetTabElement.classList.add('active');
                 }
             });
         });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
+        
+        // Set initial active state
+        const firstTab = document.getElementById('without-tab');
+        if (firstTab) {
+            firstTab.classList.add('active');
+        }
     }
 
-    // Add active state to nav links based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop - 200) {
-                current = section.getAttribute('id');
+    // Video play button functionality
+    const playButton = document.querySelector('.play-button');
+    const videoContainer = document.querySelector('.hero-video-container');
+    const videoIframe = document.querySelector('.video-wrapper iframe');
+    
+    if (playButton && videoContainer && videoIframe) {
+        playButton.addEventListener('click', function() {
+            // Hide the overlay
+            const overlay = videoContainer.querySelector('.video-overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+            }
+            
+            // Ensure iframe is clickable
+            videoIframe.style.pointerEvents = 'auto';
+            
+            // Try to play the video by clicking on it
+            videoIframe.click();
+        });
+        
+        // Show overlay on mouse leave
+        videoContainer.addEventListener('mouseleave', function() {
+            const overlay = videoContainer.querySelector('.video-overlay');
+            if (overlay) {
+                overlay.style.display = 'flex';
             }
         });
+    }
+});
 
-        navLinksAll.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
+// Performance optimization: Lazy loading for images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('loading');
+                observer.unobserve(img);
             }
         });
     });
 
-    console.log('Chiron website loaded successfully!');
-});
+    document.querySelectorAll('img').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
