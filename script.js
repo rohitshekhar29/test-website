@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animated');
             }
         });
     }, observerOptions);
@@ -184,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe all sections for fade-in effect
     document.querySelectorAll('.section').forEach(section => {
         section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        section.style.transform = 'translateY(40px)';
+        section.style.transition = 'opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1)';
         observer.observe(section);
     });
 

@@ -282,12 +282,12 @@ code, pre, .code {
 a {
     color: var(--text-link);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover {
     color: var(--primary-blue);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Focus styles for accessibility */
@@ -407,7 +407,7 @@ select:focus {
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     padding: 0.75rem 1rem;
     border-radius: 8px;
@@ -416,24 +416,25 @@ select:focus {
 
 .nav-link:hover {
     color: var(--primary-blue);
-    background: rgba(28, 115, 244, 0.1);
-    transform: translateY(-1px);
+    background: rgba(28, 115, 244, 0.12);
+    transform: translateY(-2px);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: var(--gradient-accent);
-    transition: width 0.3s ease;
+    background: var(--primary-blue);
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 1px;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 80%;
 }
 
 /* Buttons */
@@ -460,12 +461,13 @@ select:focus {
     box-shadow: 0 4px 16px rgba(28, 115, 244, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
     position: relative;
     overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
     background: var(--gradient-secondary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(28, 115, 244, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(28, 115, 244, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-color: var(--border-primary-hover);
 }
 
@@ -497,6 +499,14 @@ select:focus {
     box-shadow: 0 2px 8px rgba(28, 115, 244, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+    background: rgba(28, 115, 244, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(28, 115, 244, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(28, 115, 244, 0.5);
 }
 
 .btn-secondary:hover {
@@ -572,6 +582,13 @@ select:focus {
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     backdrop-filter: blur(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-diagram-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(28, 115, 244, 0.3);
+    border-color: rgba(28, 115, 244, 0.2);
 }
 
 .hero-diagram {
@@ -609,12 +626,15 @@ select:focus {
     gap: 0.4rem;
     padding: 0.4rem 0.8rem;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
 }
 
 .adopter-badge:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    border-color: rgba(28, 115, 244, 0.2);
+    background: rgba(28, 115, 244, 0.05);
 }
 
 .adopter-icon {
@@ -652,6 +672,12 @@ select:focus {
     overflow: hidden;
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(28, 115, 244, 0.2);
 }
 
 .hero-video {
@@ -826,11 +852,12 @@ select:focus {
     align-items: center;
     justify-content: center;
     opacity: 0.6;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-item:hover {
     opacity: 1;
+    transform: translateY(-4px) scale(1.05);
 }
 
 .logo-item img {
@@ -838,7 +865,7 @@ select:focus {
     max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%) brightness(0.8);
-    transition: filter 0.3s ease;
+    transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-item:hover img {
@@ -1189,12 +1216,13 @@ select:focus {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-card:hover {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+    border-color: rgba(28, 115, 244, 0.3);
 }
 
 .card-header {
@@ -1943,12 +1971,14 @@ select:focus {
     background: rgba(255, 255, 255, 0.02);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .benefit-item:hover {
-    background: rgba(255, 255, 255, 0.03);
-    transform: translateY(-2px);
+    background: rgba(28, 115, 244, 0.08);
+    transform: translateY(-3px);
+    border-color: rgba(28, 115, 244, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-icon {
@@ -2839,13 +2869,13 @@ select:focus {
     padding: 0;
     background: transparent;
     border: none;
-    transition: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
 .founder-member:hover {
     background: transparent;
-    transform: none;
+    transform: translateY(-8px);
     box-shadow: none;
 }
 
@@ -2860,14 +2890,14 @@ select:focus {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: none;
-    transition: none;
+    border: 3px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .founder-member:hover .member-avatar {
-    transform: none;
-    border-color: transparent;
-    box-shadow: none;
+    transform: scale(1.1) rotate(3deg);
+    border-color: rgba(28, 115, 244, 0.4);
+    box-shadow: 0 12px 32px rgba(28, 115, 244, 0.3);
 }
 
 .member-info h4 {
@@ -3078,11 +3108,13 @@ select:focus {
 }
 
 .cta-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 
-        0 24px 48px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(28, 115, 244, 0.2);
-    border-color: var(--border-primary);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+        0 32px 64px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(28, 115, 244, 0.3),
+        0 0 40px rgba(28, 115, 244, 0.15);
+    border-color: var(--border-primary-hover);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .cta-card:hover::before {
@@ -4534,12 +4566,12 @@ select:focus {
 
 /* Product Section */
 .product-section {
-    padding: 2rem 0;
+    padding: 3rem 0;
     background: transparent;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    margin: 2rem 0;
+    margin: 3rem 0;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -4548,14 +4580,19 @@ select:focus {
 .product-section .container {
     background: linear-gradient(135deg, #0a0a0a 0%, #0d1a2e 25%, #1a2a4a 50%, #1c3a5c 75%, #0a0a0a 100%);
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border-radius: 24px;
     position: relative;
     overflow: hidden;
-    padding: 4rem 3rem;
+    padding: 5rem 4rem;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     max-width: 1600px;
     margin: 0 auto;
-    width: calc(100% - 4rem); /* Ensure proper spacing from edges */
+    width: calc(100% - 4rem);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-section .container:hover {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 .product-section .container::before {
@@ -4724,7 +4761,7 @@ select:focus {
     font-size: 1.4rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
     position: relative;
     flex: 0 0 auto;
@@ -4734,9 +4771,9 @@ select:focus {
 }
 
 .showcase-tab:hover {
-    background: transparent;
-    color: var(--text-muted-80);
-    transform: none;
+    background: rgba(28, 115, 244, 0.05);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
 }
 
 .showcase-tab.active {
@@ -4797,8 +4834,9 @@ select:focus {
 .panel-grid {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
+    padding: 2rem 0;
 }
 
 .panel-content {
@@ -4843,6 +4881,14 @@ select:focus {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.highlight-item:hover {
+    transform: translateX(8px);
+    background: rgba(28, 115, 244, 0.05);
 }
 
 .highlight-icon {
@@ -4855,6 +4901,12 @@ select:focus {
     justify-content: center;
     font-size: 1.2rem;
     flex-shrink: 0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight-item:hover .highlight-icon {
+    background: rgba(28, 115, 244, 0.2);
+    transform: rotate(5deg) scale(1.1);
 }
 
 .highlight-text strong {
@@ -5207,11 +5259,16 @@ select:focus {
 
 .visual-container {
     position: relative;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: transparent;
     box-shadow: none;
     border: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visual-container:hover {
+    transform: scale(1.02);
 }
 
 .visual-image {
@@ -5219,7 +5276,12 @@ select:focus {
     height: 450px;
     object-fit: contain;
     display: block;
-    border-radius: 8px;
+    border-radius: 12px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visual-container:hover .visual-image {
+    filter: brightness(1.05);
 }
 
 /* AI Chatbot Styles */
@@ -7015,17 +7077,23 @@ video.hero-architecture-image:hover {
     color: var(--text-heading);
     cursor: pointer;
     padding: 0.5rem;
-    border-radius: 0.375rem;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(28, 115, 244, 0.15);
+    transform: scale(1.05);
 }
 
 .mobile-menu-button svg {
     width: 24px;
     height: 24px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-button:hover svg {
+    transform: rotate(90deg);
 }
 
 /* Mobile menu styles */
