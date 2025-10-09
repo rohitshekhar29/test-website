@@ -50,7 +50,7 @@
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">
-                SLA Breach? Know the Root Cause Before It Spreads.
+                SLA Breach? Know the <span class="highlight-text">Root Cause</span> Before It Spreads.
             </h1>
 
             <div class="hero-content-grid">
@@ -319,35 +319,58 @@
                             </div>
                             <div class="panel-visual">
                                 <div class="visual-container">
-                                    <div class="ai-terminal">
-                                        <div class="terminal-header">
-                                            <div class="terminal-controls">
-                                                <div class="control-dot red"></div>
-                                                <div class="control-dot yellow"></div>
-                                                <div class="control-dot green"></div>
+                                    <div class="ai-chatbot">
+                                        <div class="chatbot-header">
+                                            <div class="chatbot-avatar">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                </svg>
                                             </div>
-                                            <div class="terminal-title">AI Integration Workflow</div>
+                                            <div class="chatbot-title">
+                                                <span class="chatbot-name">Chiron AI Assistant</span>
+                                                <div class="chatbot-status">
+                                                    <span class="status-indicator"></span>
+                                                    <span>Online</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="terminal-content">
-                                            <div class="terminal-line">
-                                                <span class="line-number">1</span>
-                                                <span class="terminal-text">Can you go through the code for Rheos fetch alerts API and create cascaded performance monitor for it. Rheos is deployed in staging name space so take advantage of platform monitor</span>
+                                        <div class="chatbot-messages">
+                                            <!-- User Message -->
+                                            <div class="chat-message user-message">
+                                                <div class="message-bubble">
+                                                    <p>Create cascaded performance monitor for Rheos fetch alerts API in staging</p>
+                                                </div>
+                                                <div class="message-timestamp">2:34 PM</div>
                                             </div>
-                                            <div class="terminal-line">
-                                                <span class="line-number">2</span>
-                                                <span class="terminal-text success">✓ Analyzing Rheos fetch alerts API code patterns...</span>
+                                            
+                                            <!-- AI Response 1 -->
+                                            <div class="chat-message ai-message">
+                                                <div class="message-avatar ai-avatar">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="message-content">
+                                                    <div class="message-bubble">
+                                                        <p>I'll create cascaded performance monitor for Rheos fetch alerts API by analysing the telemetry emitted by the app and the platform.</p>
+                                                    </div>
+                                                    <div class="message-timestamp">2:34 PM</div>
+                                                </div>
                                             </div>
-                                            <div class="terminal-line">
-                                                <span class="line-number">3</span>
-                                                <span class="terminal-text success">✓ Creating cascaded performance monitor for Rheos fetch alerts API</span>
-                                            </div>
-                                            <div class="terminal-line">
-                                                <span class="line-number">4</span>
-                                                <span class="terminal-text success">✓ Leveraging staging namespace platform monitoring capabilities</span>
-                                            </div>
-                                            <div class="terminal-line">
-                                                <span class="line-number">5</span>
-                                                <span class="terminal-text success">🚀 Now monitoring are active</span>
+
+                                            <!-- AI Response 2 -->
+                                            <div class="chat-message ai-message">
+                                                <div class="message-avatar ai-avatar">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="message-content">
+                                                    <div class="message-bubble">
+                                                        <p>Perfect! I have the list of signals emitted and the fields required to make the correlation. Now, I will create the monitors by analysing Rheos API patterns.</p>
+                                                    </div>
+                                                    <div class="message-timestamp">2:35 PM</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -548,7 +571,12 @@
 
     </section>
 
-  
+    <!-- Curved Section Divider -->
+    <div class="section-divider">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,70 Q720,5 1440,70" stroke="rgba(28, 115, 244, 0.4)" stroke-width="1.5" fill="none"/>
+        </svg>
+    </div>
 
     <!-- Solutions Section -->
     <section id="solutions" class="section use-cases-section">
@@ -584,50 +612,8 @@
             <div class="slider-container">
                 <div class="slider-wrapper">
                     
-                    <!-- Slide 1: E-Commerce -->
-                    <div class="slider-slide active" data-slide="0">
-                        <div class="panel-grid">
-                            <div class="panel-content">
-                                <div class="content-badge">E-COMMERCE</div>
-                                <h3>Checkout Latency SLA Breach</h3>
-                                <p class="panel-description">For e-commerce platforms, even a few seconds of checkout delay can cost millions in lost revenue.</p>
-                                
-                                <div class="feature-highlights">
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">💳</div>
-                                        <div class="highlight-text">
-                                            <strong>Transaction Flow Monitoring</strong>
-                                            <span>Track complete checkout journey in real time</span>
-                                        </div>
-                                    </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">🔍</div>
-                                        <div class="highlight-text">
-                                            <strong>Payment Gateway Correlation</strong>
-                                            <span>Identify bottlenecks in payment processing chain</span>
-                                        </div>
-                                    </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">⚡</div>
-                                        <div class="highlight-text">
-                                            <strong>Instant Root Cause</strong>
-                                            <span>Pinpoint DB, service, or cache issues immediately</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="panel-visual">
-                                <div class="visual-container">
-                                    <img src="images/CHIRON_ARCH.png" alt="E-commerce checkout monitoring" class="visual-image">
-                                </div>
-                                <div class="media-caption">Frontend → Payment → Database correlation</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2: Live Streaming -->
-                    <div class="slider-slide" data-slide="1">
+                      <!-- Slide 2: Live Streaming -->
+                      <div class="slider-slide" data-slide="1">
                         <div class="panel-grid">
                             <div class="panel-content">
                                 <div class="content-badge">LIVE STREAMING</div>
@@ -655,9 +641,9 @@
                                             <strong>Exact Component Identification</strong>
                                             <span>Pinpoints exact component causing degradation</span>
                                         </div>
-                                    </div>
-                                </div>
                             </div>
+                        </div>
+                    </div>
     
                             <div class="panel-visual">
                                 <div class="visual-container">
@@ -666,91 +652,96 @@
                                 <div class="media-caption">CDN → encoder → backend correlation</div>
                             </div>
                         </div>
+                        </div>
+                        
+                    
+                    <!-- Slide 2: Live Streaming -->
+                    <div class="slider-slide" data-slide="1">
+                    <div class="panel-grid">
+                        <div class="panel-content">
+                            <div class="content-badge">LIVE STREAMING</div>
+                            <h3>Buffering SLA Breach In Live Streaming</h3>
+                            <p class="panel-description">For media platforms, even seconds of buffering mean lost viewers and revenue.</p>
+                            
+                            <div class="feature-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">📺</div>
+                                    <div class="highlight-text">
+                                        <strong>Real-Time Pipeline Monitoring</strong>
+                                        <span>Monitors entire streaming pipeline in real time</span>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🔍</div>
+                                    <div class="highlight-text">
+                                        <strong>Precise Root Cause</strong>
+                                        <span>Correlates buffering events with backend I/O metrics</span>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🎯</div>
+                                    <div class="highlight-text">
+                                        <strong>Exact Component Identification</strong>
+                                        <span>Pinpoints exact component causing degradation</span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="panel-visual">
+                            <div class="visual-container">
+                                <img src="images/Deployment_transparent.png" alt="Streaming pipeline monitoring" class="visual-image">
+                            </div>
+                            <div class="media-caption">CDN → encoder → backend correlation</div>
+                        </div>
+                    </div>
                     </div>
 
-                    <!-- Slide 3: SaaS Platform -->
-                    <div class="slider-slide" data-slide="2">
+                      <!-- Slide 2: Live Streaming -->
+                      <div class="slider-slide" data-slide="1">
                         <div class="panel-grid">
                             <div class="panel-content">
-                                <div class="content-badge">SAAS PLATFORM</div>
-                                <h3>API Response Time SLA Breach</h3>
-                                <p class="panel-description">For SaaS platforms, API latency directly impacts customer satisfaction and retention.</p>
+                                <div class="content-badge">LIVE STREAMING</div>
+                                <h3>Buffering SLA Breach In Live Streaming</h3>
+                                <p class="panel-description">For media platforms, even seconds of buffering mean lost viewers and revenue.</p>
                                 
                                 <div class="feature-highlights">
                                     <div class="highlight-item">
-                                        <div class="highlight-icon">🔗</div>
+                                        <div class="highlight-icon">📺</div>
                                         <div class="highlight-text">
-                                            <strong>API Dependency Mapping</strong>
-                                            <span>Track requests across microservices and databases</span>
+                                            <strong>Real-Time Pipeline Monitoring</strong>
+                                            <span>Monitors entire streaming pipeline in real time</span>
                                         </div>
                                     </div>
                                     <div class="highlight-item">
-                                        <div class="highlight-icon">📊</div>
+                                        <div class="highlight-icon">🔍</div>
                                         <div class="highlight-text">
-                                            <strong>Service Mesh Insights</strong>
-                                            <span>Identify network, pod, or queue bottlenecks</span>
+                                            <strong>Precise Root Cause</strong>
+                                            <span>Correlates buffering events with backend I/O metrics</span>
                                         </div>
                                     </div>
                                     <div class="highlight-item">
                                         <div class="highlight-icon">🎯</div>
                                         <div class="highlight-text">
-                                            <strong>Multi-Tenant Isolation</strong>
-                                            <span>Separate noisy neighbors from genuine issues</span>
+                                            <strong>Exact Component Identification</strong>
+                                            <span>Pinpoints exact component causing degradation</span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="panel-visual">
-                                <div class="visual-container">
-                                    <img src="images/cascased_gif.gif" alt="API monitoring architecture" class="visual-image">
-                                </div>
-                                <div class="media-caption">Gateway → Services → Data Layer correlation</div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Slide 4: Financial Services -->
-                    <div class="slider-slide" data-slide="3">
-                        <div class="panel-grid">
-                            <div class="panel-content">
-                                <div class="content-badge">FINANCIAL SERVICES</div>
-                                <h3>Transaction Processing SLA Breach</h3>
-                                <p class="panel-description">For fintech platforms, even milliseconds of delay can breach compliance and cost customer trust.</p>
-                                
-                                <div class="feature-highlights">
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">💰</div>
-                                        <div class="highlight-text">
-                                            <strong>Transaction Tracing</strong>
-                                            <span>Monitor end-to-end transaction flows</span>
-                                        </div>
-                                    </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">🔐</div>
-                                        <div class="highlight-text">
-                                            <strong>Compliance Monitoring</strong>
-                                            <span>Ensure SLA adherence for regulatory requirements</span>
-                                        </div>
-                                    </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">⚡</div>
-                                        <div class="highlight-text">
-                                            <strong>Critical Path Analysis</strong>
-                                            <span>Identify slowdowns in payment processing pipeline</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
     
                             <div class="panel-visual">
                                 <div class="visual-container">
-                                    <img src="images/CHIRON_ARCH.png" alt="Financial transaction monitoring" class="visual-image">
+                                    <img src="images/Deployment_transparent.png" alt="Streaming pipeline monitoring" class="visual-image">
                                 </div>
-                                <div class="media-caption">Auth → Processing → Settlement correlation</div>
+                                <div class="media-caption">CDN → encoder → backend correlation</div>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                        
+                    
+                    
+                    
                 
                 </div>
             </div>
@@ -776,13 +767,7 @@
                         <img src="images/logo_Rubrik.png" alt="Rubrik">
                     </div>
                     <div class="logo-item">
-                        <img src="images/logo_aws.svg" alt="AWS">
-                    </div>
-                    <div class="logo-item">
-                        <img src="images/logo_Microsoft.png" alt="Microsoft">
-                    </div>
-                    <div class="logo-item">
-                        <img src="images/logo_Salesforce.png" alt="Salesforce">
+                        <img src="images/logo_palo_alto.png" alt="Palo Alto">
                     </div>
                 </div>
             </div>
@@ -810,12 +795,15 @@
                     
                     <h3 class="card-title">Get Chiron running in your environment with simple CLI commands. Works with Kubernetes, Kafka, and Postgres.</h3>
                     
-                    <div class="code-block">
-                        <div class="code-header">
-                            <div class="code-tabs">
-                                <span class="code-tab active">Terminal</span>
-                        </div>
-                            <div class="code-actions">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="terminal-dot close"></span>
+                                <span class="terminal-dot minimize"></span>
+                                <span class="terminal-dot maximize"></span>
+                            </div>
+                            
+                            <div class="terminal-actions">
                                 <button class="copy-btn" onclick="copyCode()">
                                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -823,30 +811,26 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="code-content">
-                            <div class="code-line">
-                                <span class="line-number">1</span>
-                                <span class="code-text"><span class="prompt">$</span> chiron rule create "Monitor Kafka GET APIs" --namespace kafka</span>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">chiron rule create "Monitor Kafka GET APIs" --namespace kafka</span>
                             </div>
-                            <div class="code-line">
-                                <span class="line-number">2</span>
-                                <span class="code-text success">✓ Creating monitor for Kafka namespace...</span>
+                            <div class="terminal-line output">
+                                <span class="success">✓ Creating monitor for Kafka namespace...</span>
                             </div>
-                            <div class="code-line">
-                                <span class="line-number">3</span>
-                                <span class="code-text success">✓ Analyzing Kafka API endpoints...</span>
+                            <div class="terminal-line output">
+                                <span class="success">✓ Analyzing Kafka API endpoints...</span>
                             </div>
-                            <div class="code-line">
-                                <span class="line-number">4</span>
-                                <span class="code-text success">✓ Rule created: kafka_get_api_monitor</span>
+                            <div class="terminal-line output">
+                                <span class="success">✓ Rule created: <span class="highlight-text">kafka_get_api_monitor</span></span>
                             </div>
-                            <div class="code-line">
-                                <span class="line-number">5</span>
-                                <span class="code-text"><span class="prompt">$</span> chiron start</span>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">chiron start</span>
                             </div>
-                            <div class="code-line">
-                                <span class="line-number">6</span>
-                                <span class="code-text success">🚀 Now monitoring are active. View: <span class="highlight">localhost:3000</span></span>
+                            <div class="terminal-line output">
+                                <span class="success">🚀 Now monitoring are active. View: <span class="highlight-text">localhost:3000</span></span>
                             </div>
                         </div>
                     </div>
@@ -876,7 +860,7 @@
                     <div class="clean-process">
                         <div class="process-timeline">
                             <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                                <div class="timeline-dot">1</div>
                                 <div class="timeline-content">
                                     <h4>Identify</h4>
                                     <p>Critical SLA and its dependencies and setup</p>
@@ -884,7 +868,7 @@
                             </div>
                             
                             <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                                <div class="timeline-dot">2</div>
                                 <div class="timeline-content">
                                     <h4>Deploy</h4>
                                     <p>Install and add connectors or custom connectors (optional)</p>
@@ -892,7 +876,7 @@
                             </div>
                             
                             <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                                <div class="timeline-dot">3</div>
                                 <div class="timeline-content">
                                     <h4>Activate</h4>
                                     <p>Fully functional deployment with monitoring</p>
@@ -900,7 +884,7 @@
                             </div>
                             
                             <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                                <div class="timeline-dot">4</div>
                                 <div class="timeline-content">
                                     <h4>Observe</h4>
                                     <p>Monitor SLA for desired days and fine-tune</p>

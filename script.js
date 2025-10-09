@@ -1,5 +1,23 @@
 // Tab functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to hero section on page load
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    });
+
+    // Logo click handler - scroll to hero section
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+        navLogo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
